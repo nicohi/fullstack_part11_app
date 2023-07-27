@@ -24,10 +24,10 @@ export const { updateAnecdote, appendAnecdote, setAnecdotes } = anecdoteSlice.ac
 export default anecdoteSlice.reducer
 
 export const initializeAnecdotes = () => {
-    return async dispatch => {
-      const anecdotes = await anecdoteService.getAll()
-      dispatch(setAnecdotes(anecdotes))
-    }
+  return async dispatch => {
+    const anecdotes = await anecdoteService.getAll()
+    dispatch(setAnecdotes(anecdotes))
+  }
 }
 
 export const createAnecdote = content => {
